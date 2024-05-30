@@ -1,0 +1,659 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>PBI Dashboard Icons</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="indexen.html" class="logo"><strong>Optimization and maintenance of radio networks via Power BI </strong> Ericsson </a>
+									<!--
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+									</ul>
+								-->
+								</header>
+
+
+							<!-- Banner -->
+								<section id="banner">
+									<div class="content">
+										<header>
+
+											<h1>Technical File<br />
+											</h1>
+
+											<p>This technical file introduces the use of the 4G network optimization dashboard. Designed to provide a detailed view of 4G network performance, this dashboard aims to provide you with the tools needed to make informed decisions and optimize its operation.</p>
+										</header>
+										<!--<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. Pellentesque sapien ac quam. Lorem ipsum dolor sit nullam.</p>-->
+										<!--<ul class="actions">
+											<li><a href="#" class="button big">Learn More</a></li>
+										</ul>
+									-->
+									</div>
+									
+										<img src="images/ericsson.png" alt="" width="200" height="200"/>
+									
+								</section>
+								<h2 id="content"> Introduction</h2>
+								<h3>General explanation of the dashboard </h3>
+										<p>The dashboard includes several interactive visualizations that allow you to view key data related to 4G network performance. You will find information such as data transfer rates, service quality, network alarms, and more. The main goal of this dashboard is to help you track and analyze this data to identify trends, potential issues, and network optimization opportunities. To fully utilize the dashboard, it is important to have the necessary resources such as Python and Power BI. These tools will allow you to run data transformation scripts and visualize the results interactively. Additionally, ensure you have the ability to run .bat files to automate processes.
+										</p>
+
+									<div class="row">
+											<div class="col-6 col-12-small">
+												<h3>How to install Power BI Desktop?</h3>
+												<p>To access this dashboard, you will need Power BI Desktop, a powerful data visualization tool. If you do not already have it installed, you can download and install it for free from the official Power BI website.</p>
+											</div>
+											<div class="col-6 col-12-small">
+												<h3> How to install Python for scrip execution?</h3>
+												<p>Some features of this dashboard rely on Python scripts to perform data transformations in the background. To run these scripts, you will need to install Python on your system. You can download and install Python from the official Python website. Make sure to install version 3.x of Python.</p>
+											</div>
+											<!-- Break -->
+											
+												<h2>List of 4G Radio Sites</h2>
+												<p>In this first task, we worked on the 4G eNode sites in the Nabeul region of Tunisia. The main objective was to visualize and analyze the sites on a map in Power BI, providing detailed information about each site and enabling easy searches using filters, slicers, and information tables.</p>
+												<h3>Dashboard Page Content</h3>
+												<dl>
+														<dt>Site Map</dt>
+														<dd>
+															<p>Displays all the sites in the region on a map, with the exact location of the sites and the direction of the antennas represented by arrow icons.</p>
+														</dd>
+														<dt>Information Table</dt>
+														<dd>
+															<p>Table showing the details of the selected sites on the map, such as SiteID_x, SectorID, Site_Name, eNBId, freqBand, operationalState, administrativeState.</p>
+														</dd>
+														<dt>Filtrs and Slicers</dt>
+														<dd>
+															<p>Filters for delegation, LogicalSite, SiteID_x, operationalState, administrativeState, making searches and targeted analyses easier.</p>
+														</dd>
+												</dl>
+												<h3>Data Used</h3><br>
+													<p>The data comes from the "4G" database and contains the following columns:</p>
+													
+													<div class="table-wrapper">
+														<table class="alt">
+
+															<tbody>
+																
+																<tr>
+																	<td>Region</td>
+																	<td>LogicalSite</td>
+																	<td>NodeId_x</td>
+																	<td>SiteID_x</td>
+																</tr>
+																<tr>
+																	<td>eNBId</td>
+																	<td>EUtranCellFDDId</td>
+																	<td>Cell_Name</td>
+																	<td>cellId</td>
+																</tr>
+																<tr>
+																	<td>ECGI</td>
+																	<td>physicalLayerCellId</td>
+																	<td>freqBand</td>
+																	<td>earfcndl</td>
+																</tr>
+																<tr>
+																	<td>dlChannelBandwidth</td>
+																	<td>tac</td>
+																	<td>noOfTxAntennas</td>
+																	<td>SectorID</td>
+																</tr>
+																<tr>
+																	<td>Sector_index</td>
+																	<td>LAT</td>
+																	<td>LONG</td>
+																	<td>AZIMUTH</td>
+																</tr>
+																<tr>
+																	<td>Site_Name</td>
+																	<td>administrativeState</td>
+																	<td>operationalState</td>
+																	
+																</tr>
+															</tbody>
+															
+														</table>
+													</div>
+
+
+													<p>It is important to use the same data format (the same columns) in the xlsx file to ensure the dashboard functions correctly after updating. </p>
+
+
+													<h3>Dashboard Refresh</h3>
+													
+															<ol>
+																<p>The dashboard refresh is automated and takes place in three steps.</p>
+																<li>Gather your data in an xlsx file and save this file in the folder "../List of 4G Sites/Input"</li>
+																<li>Run the .bat file in the folder "../List of 4G Sites" corresponding to task 2 by double-clicking on it to process the data and create the output file in "../List of 4G Sites/Output"</li>
+																<li>Open the Power BI Dashboard and refresh the data to incorporate the changes.</li>
+															</ol>
+
+															<p>You just need to use the filters and slicers to navigate and analyze the data interactively on the dashboard.</p>
+												
+											
+									</div>
+
+
+									<div class="row">
+											
+											<!-- Break -->
+											
+												<h2>HOSR Performance</h2>
+												<p>In this task, we compared the Handovers of the 4G sites between the data of the reference week 0 and week 1 in the Nabeul region of Tunisia. The main objective was to analyze the Handover Success Rate (HOSR) rates of the sites to identify performance improvements or degradations.</p>
+												<h3>Dashboard Page Content</h3>
+												<dl>
+														<dt>Site Map with Handovers</dt>
+														<dd>
+															<p>ADisplays the sites on a map, with arrow icons representing the antennas. The color of the icons varies based on the HOSR rate compared to the previous week: red (lower), yellow (improved but still below 99%), green (above 99%), gray (new site or new measurement record).</p>
+														</dd>
+														<dt>Information Table</dt>
+														<dd>
+															<p>Table showing the details of the selected sites on the map, such as ERBS Id, EUtranCellFDD, EUtranFreqRelation, LTE INTRA FREQ HOSR.</p>
+														</dd>
+														<dt>Filtrs and Slicers</dt>
+														<dd>
+															<p>Filters to facilitate the search and analysis of data, particularly for EUtranCellFDD, ERBS Id, ID (added column), EUtranFreqRelation, Color (added column)</p>
+														</dd>
+													</dl>
+													<h3>Data Used</h3><br>
+														<p>The data comes from the databases of weeks 0 and 1, and includes the following columns:</p>
+													<div class="table-wrapper">
+
+														<table class="alt">
+															
+															<tbody>
+																
+																<tr>
+																	<td>WEEK</td>
+																	<td>ERBS Id</td>
+																	<td>EUtranCellFDD</td>
+																	<td>EUtranFreqRelation</td>
+																	<td>LTE INTRA FREQ HOSR</td>
+																</tr>
+																<tr>
+																	
+																	<td>Σ IntraHOExecAtt</td>
+																	<td>Σ IntraHO Fails</td>
+																	<td>Σ IntraHOExec Fails</td>
+																	<td>Σ IntraHOPrep Fails</td>
+																</tr>
+																
+															</tbody>
+															
+														</table>
+													</div>
+
+
+													<p>It is important to use the same data format (the same columns) in the xlsx file to ensure the dashboard functions correctly after updating.</p>	
+
+													<h3>Dashbord Refresh</h3><br>
+													
+															<ol>
+																<p>The dashboard refresh is automated and takes place in three steps.</p>
+																<li>Gather your data in an xlsx file and save this file in the folder "../HOSR/Input"</li>
+																<li>Run the .bat file in the folder "../HOSR" corresponding to task 2 by double-clicking on it to process the data and create the output file in "../HOSR/Output"</li>
+																<li>Open the Power BI file and refresh the data to incorporate the changes.</li>
+															</ol>
+
+															<p>You just need to use the filters and slicers to navigate and analyze the data interactively on the dashboard.</p>
+												
+											
+									</div>
+									<div class="row">
+											
+											<!-- Break -->
+											
+												<h2>Alarms</h2>
+												<p>In this task, we analyzed the alarms of the 4G sites between the data of week 5 and week 6 in the Nabeul region of Tunisia. The objective was to detect new alarms that appeared in week 6, as well as persistent alarms from week 5.</p>
+												<h3>Dashboard Page Content</h3>
+												<dl>
+														<dt>Site Map with Alarms</dt>
+														<dd>
+															<p>Displays the sites on a map, with colored markers indicating the presence of alarms. The color code was established according to the severity of the alarm. Thus we have:
+															<ul>
+																<li>Black for a critical alarm</li>
+																<li>Brown for a major alarm</li>
+																<li>Red for a warning alarm</li>
+																<li>Orange for a minor alarm</li>
+																<li>Green for a cleared alarm</li>
+															</ul>
+														</p>
+														</dd>
+														<dt>Alarm Table</dt>
+														<dd>
+															<p>Presentation of alarm details for each selected site on the map, including NodeID_x, Alarming Object and Severity</p>
+														</dd>
+														<dt>Informative Cards</dt>
+														<dd>
+															<p>Cards have been added for more alarm details, such as  Specific Problem, Probable Cause and Root </p>
+														</dd>
+														<dt>Filtrs et Slicers</dt>
+														<dd>
+															<p>Using filters for NodeID_x and Severity to facilitate the search and analysis of data.</p>
+														</dd>
+													</dl>
+													<h3>Data Used</h3><br>
+														<p>The data comes from the databases od a reference week S0 and a week S+1, and includes the following columns :<br></p>
+													<div class="table-wrapper">
+														<table class="alt">
+															<tbody>
+																
+																<tr>
+																	<td>EventPoId</td>
+																	<td>Network Element</td>
+																	<td>Object Of Reference</td>
+																	<td>Alarming Object</td>
+																	<td>Specific Problem</td>
+																	<td>Probable Cause</td>
+																	<td>Event Type</td>
+																	<td> Problem Text</td>
+																</tr>
+																<tr>
+																	
+																	<td>Problem Detail</td>
+																	<td>Number</td>
+																	<td>Insert Time</td>
+																	<td>Record Type</td>
+																	<td>Severity</td>
+																	<td>Previous Severity</td>
+																	<td>State</td>
+																	<td>Ack</td>
+																</tr>
+																<tr>
+																	
+																	<td>Ack Time</td>
+																	<td>Cease Operator </td>
+																	<td>Cease Time </td>
+																	<td>Repeated </td>
+																	<td>Oscillation </td>
+																	<td>Comment</td>
+																	<td>Processing Type </td>
+																	<td>FmxGenerated</td>
+																</tr>
+																<tr>
+																	
+																	<td>LastUpdated</td>
+																	<td>LastAlarmOperation </td>
+																	<td>Backup Object Instance</td>
+																	<td>Trend Indication </td>
+																	<td>Proposed Repair Action </td>
+																	<td>AdditionalInformation</td>
+																	<td>Root </td>
+																	
+																</tr>
+															</tbody>
+															
+														</table>
+													</div>
+
+
+													<p>It is important to use the same data format (the same columns) in the xlsx file to ensure the dashboard functions correctly after updating </p>	
+
+													<h3>Dashbord Refresh</h3>
+													
+															<ol>
+																<p>the dashboard refresh is automated and takes place in three steps.</p>
+																<li>Gather your data in an xlsx file and save this file in the folder “../Liste des alarmes/Input”</li>
+																<li>Run the .bat file in the folder “../Liste des alarmes” corresponding to task 2 by double-clicking on it to process the data and create the output file in  “../Liste des alarmes/Output”</li>
+																<li>Open the Power BI dashboard and refresh the data to incorporate the changes.</li>
+															</ol>
+
+															<p>You just need to use the filters and slicers to navigate and analyze the data interactively on the dashboard</p>
+												
+											
+									</div>
+									<div class="row">
+											
+											<!-- Break -->
+											
+												<h2 id="content">4G Site Traffic Analysis</h2>
+												<p>For tasks 4 and 5, we performed a traffic analysis of the 4G sites int The Nabeul region of Tunisia. The objective was to understand the traffic trends of the sites and identify sites with abnormally high or low traffic.</p>
+												<h3>Dashboard Page Content</h3>
+												<dl>
+														<dt>Site Map with Traffic </dt>
+														<dd>
+															<p>Displays the sites on a map, with colored markers indicating the level of traffic. High trafic sites are marked in red, moderate traffic sites in orange, and low traffic sites in green.</p> 
+															
+														</dd>
+														<dt>Information Table</dt>
+														<dd>
+															<p>Presentation of traffic details for each selected site on the map, including data volum (in GB) and other relevant information..</p>
+														</dd>
+														<dt>Informative Cards</dt>
+														<dd>
+															<p>Displays detailed information on a selected site.</p>
+														</dd>
+														<dt>Line Graph</dt>
+														<dd>
+															<p>Graphical representation of the UL THPT and DL THPT of the sites over time, allowing visualization of traffic trends.
+</p>
+														</dd>
+														<dt>Filtrs et Slicers </dt>
+														<dd>
+															<p> Using filters for Year, Week and NodeId_x to facilitate the search and analysis of traffic data.</p>
+															<p>The data comes from the database contaning the following columns:
+																<ul>
+																<li>Week </li>
+																<li>Year</li>
+																<li>ERBS Id</li>
+																<li>HOSR_IntraFr</li>
+																<li>HOSR_InterFr</li>
+																<li>UL THPT(Mbps)</li>
+																<li>
+																	DL THPT(Mbps) 
+																</li>
+																<li>
+																	Data_Vol(GB)
+																</li>
+															</ul>
+</p>
+														</dd>
+													</dl>
+													<h3>Data Used  <br></h3><br>
+														<p>The data comes from the database containing the following columns :</p>
+													<div class="table-wrapper">
+														<table class="alt">
+															<tbody>
+																
+																<tr>
+																	<td>Week</td>
+																	<td>Year</td>
+																	<td>ERBS Id</td>
+																	<td>HOSR_IntraFr</td>
+																	
+																</tr>
+																<tr>
+																	
+																	<td>HOSR_InterFr</td>
+																	<td>UL THPT(Mbps)</td>
+																	<td>DL THPT(Mbps)</td>
+																	<td>Data_Vol(GB)</td>
+																	
+																</tr>
+																
+															</tbody>
+															
+														</table>
+													</div>
+
+
+													<p>It is important to use the same data format (the same columns) in the xlsx file to ensure the dashboard functions correctly after updating.</p>	
+
+													<h3>Dashboard Refresh<br></h3>
+													
+															<ol>
+																<p>The dashboard refresh is automated and takes place in three steps.  
+</p>
+																<li>Gather your data in an xlsx file in the folder “../Traffic/Input”
+</li>
+																<li>Run the .bat file in the folder “../Traffic” corresponding to task 2 by double-clicking on it to process the data and create the output file in “../Traffic/Output”
+</li>
+																<li>Open the Power Bi Dashboard and refresh the data to incorporate the changes.
+</li>
+															</ol>
+
+															<p>You just need to use the filters ans slicers to navigate and analyze the data interactively on the dashboard.
+</p>
+												
+											
+									</div>
+									<h2 id="content"> Conclusion</h2>
+									<p>This technical file detailed the use of the 4G network optimization dashboard. By combining varied data and advanced analysis tools, this dashboard offers a comprehensive view of network performance, enabling telecommunications operators to make informed decisions to improve service efficiency and quality. For any issues, please refer to the following contacts : 
+									<div class="table-wrapper">
+														<table>
+															<thead>
+																<tr>
+																	<th>Name</th>
+																	<th>Email</th>
+																	<th>Phone</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td>Wissal</td>
+																	<td>wissal.bahar@gmail.com</td>
+																	<td>+216 28 742 873</td>
+																</tr>
+																<tr>
+																	<td>Wissem</td>
+																	<td>Vbahar.wissem@gmail.com</td>
+																	<td>+216 28 445 369</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+
+									</p>
+
+
+
+							<!-- Section 
+								<section>
+									<header class="major">
+										<h2>Erat lacinia</h2>
+									</header>
+									<div class="features">
+										<article>
+											<span class="icon fa-gem"></span>
+											<div class="content">
+												<h3>Portitor ullamcorper</h3>
+												<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											</div>
+										</article>
+										<article>
+											<span class="icon solid fa-paper-plane"></span>
+											<div class="content">
+												<h3>Sapien veroeros</h3>
+												<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											</div>
+										</article>
+										<article>
+											<span class="icon solid fa-rocket"></span>
+											<div class="content">
+												<h3>Quam lorem ipsum</h3>
+												<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											</div>
+										</article>
+										<article>
+											<span class="icon solid fa-signal"></span>
+											<div class="content">
+												<h3>Sed magna finibus</h3>
+												<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											</div>
+										</article>
+									</div>
+								</section> -->
+
+							<!-- Section 							
+							<section>
+									<header class="major">
+										<h2>Ipsum sed dolor</h2>
+									</header>
+									<div class="posts">
+										<article>
+											<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
+											<h3>Interdum aenean</h3>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											<ul class="actions">
+												<li><a href="#" class="button">More</a></li>
+											</ul>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
+											<h3>Nulla amet dolore</h3>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											<ul class="actions">
+												<li><a href="#" class="button">More</a></li>
+											</ul>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
+											<h3>Tempus ullamcorper</h3>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											<ul class="actions">
+												<li><a href="#" class="button">More</a></li>
+											</ul>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
+											<h3>Sed etiam facilis</h3>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											<ul class="actions">
+												<li><a href="#" class="button">More</a></li>
+											</ul>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
+											<h3>Feugiat lorem aenean</h3>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											<ul class="actions">
+												<li><a href="#" class="button">More</a></li>
+											</ul>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic06.jpg" alt="" /></a>
+											<h3>Amet varius aliquam</h3>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											<ul class="actions">
+												<li><a href="#" class="button">More</a></li>
+											</ul>
+										</article>
+									</div>
+								</section> -->
+
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search 
+								<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section>-->
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="indexen.html">Homepage</a></li>
+										<li><a href="genericen.html">Arrows</a></li>
+										<li><a href="alerten.html">Alerts</a></li>
+										<li><a href="satelliteen.html">Satellite</a></li>
+										<li><a href="ficheen.html">Technical File</a></li>
+										<!--<li>
+											<span class="opener">Arrows</span>
+											<ul>
+												<li><a href="#">Up Arrows</a></li>
+												<li><a href="#">Ipsum Adipiscing</a></li>
+												<li><a href="#">Tempus Magna</a></li>
+												<li><a href="#">Feugiat Veroeros</a></li>
+											</ul>
+										</li>-->
+										<!--<li><a href="#">Etiam Dolore</a></li>
+										<li><a href="#">Adipiscing</a></li>
+										<li>
+											<span class="opener">Another Submenu</span>
+											<ul>
+												<li><a href="#">Lorem Dolor</a></li>
+												<li><a href="#">Ipsum Adipiscing</a></li>
+												<li><a href="#">Tempus Magna</a></li>
+												<li><a href="#">Feugiat Veroeros</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Maximus Erat</a></li>
+										<li><a href="#">Sapien Mauris</a></li>
+										<li><a href="#">Amet Lacinia</a></li>-->
+									</ul>
+								</nav>
+
+							<!-- Section -->
+								<!--<section>
+									<header class="major">
+										<h2>Ante interdum</h2>
+									</header>
+									<div class="mini-posts">
+										<article>
+											<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+										</article>
+									</div>
+									<ul class="actions">
+										<li><a href="#" class="button">More</a></li>
+									</ul>
+								</section> -->
+
+							<!-- Section -->
+								<!--<section>
+									<header class="major">
+										<h2>Get in touch</h2>
+									</header>
+									<p>Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="#">RCSN@example.com</a></li>
+										<li class="icon solid fa-phone">(000) 000-0000</li>
+										<li class="icon solid fa-home">Rue NA NA NA<br />
+										NA, NA</li>
+									</ul>
+								</section>-->
+
+							<!-- Footer -->
+								<footer id="footer">
+									<ul class="actions">
+														
+														<li><a href="#" class="button">English</a></li>
+														<li><a href="fiche.html" class="button primary">Français</a></li>
+													</ul>
+									<!--<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>-->
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
